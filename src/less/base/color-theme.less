@@ -1,0 +1,196 @@
+html {
+  --color-primary: var(--color-white-light);
+  --color-secondary: var(--color-grey);
+  --color-tertiary: var(--color-grey);
+  --color-quaternary: var(--color-white-light);
+
+  --color-bg-main-gradient: var(--gradient-main);
+  --color-bg-stat-primary: var(--gradient-gold);
+  --color-bg-stat-secondary: var(--gradient-dark);
+  --color-bg-stat-tertiary: var(--gradient-dark-light);
+  --color-bg-stat-quaternary: var(--gradient-gold-two);
+  --color-bg-stat-fivefold: var(--gradient-dark-two);
+
+  --shadow-stat-primary: var(--shadow-gold);
+  --shadow-stat-secondary: var(--shadow-dark);
+  --shadow-stat-tertiary: var(--shadow-dark-light);
+
+  --color-button-primary: var(--color-white-light);
+  --color-button-secondary: var(--color-grey);
+
+  --color-graph-extra: var(--color-extra-dark);
+  --color-graph-max: var(--color-max-dark);
+  --color-graph-mid: var(--color-mid-dark);
+  --color-graph-min: var(--color-min-dark);
+  --shadow-graph-extra: var(--shadow-extra-dark);
+  --shadow-graph-max: var(--shadow-max-dark);
+  --shadow-graph-mid: var(--shadow-mid-dark);
+  --shadow-graph-min: var(--shadow-min-dark);
+
+  // colors basic
+  --color-black: #000000;
+  --color-dark: #261C00;
+  --color-white: #ffffff;
+  --color-white-light: #FCFBF7;
+  --color-grey:  #918F8A;
+  --color-grey-light: #BFBFBF;
+  --color-yellow: #F4B000;
+  // gradients basic
+  --gradient-none: none;
+  --gradient-main: radial-gradient(70.24% 70.24% at 49.87% 29.76%, rgba(18, 12, 1, 0.9) 0%, #000000 100%);
+  --gradient-gold: radial-gradient(91.67% 122.17% at 69.17% -11.17%, #FFA300 0%, #2D1C00 100%);
+  --gradient-gold-two: radial-gradient(81.14% 100% at 50% 0%, #FFA300 0%, #2D1C00 100%);
+  --gradient-dark: linear-gradient(180deg, rgba(0, 0, 0, 0) -2.22%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(149.08% 95.38% at 38.75% 71.48%, #000000 0%, #231900 0.01%, #4D4D4D 100%);
+  --gradient-dark-two: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%), radial-gradient(149.08% 93.3% at 38.75% 72.1%, #000000 0%, #231900 0.01%, #4D4D4D 100%);
+  --gradient-gold-light: linear-gradient(180deg, #FFF2D1 0.82%, #FFD66C 100%);
+  --gradient-white-light: linear-gradient(180deg, rgba(244, 244, 244, 0.9) 0.82%, #E9E9E9 100%, rgba(234, 234, 234, 0) 100%);
+  --gradient-dark-light: radial-gradient(85.62% 148.33% at 49.85% 100%, rgba(68, 58, 42, 0.7864) 0%, rgba(0, 0, 0, 0.8) 100%);
+  // shadows basic
+  --shadow-gold: inset -1px 1px 1px rgba(255, 255, 255, 0.4), inset 0px 6px 15px rgba(255, 162, 0, 0.4);
+  --shadow-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(103, 103, 103, 0.6);
+  --shadow-gold-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.8);
+  --shadow-white-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(207, 207, 207, 0.5);
+  --shadow-dark-light: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 16px rgba(255, 255, 255, 0.1);
+    // colors bar
+  --color-extra-dark: radial-gradient(2258.03% 620.37% at 83.33% 88.95%, #201502 0%, #C7830A 100%);
+  --color-max-dark: radial-gradient(5528.36% 3005.63% at 74.43% 75.84%, rgba(0, 0, 0, 0.9) 0%, rgba(33, 22, 2, 0.9) 0.01%, rgba(172, 113, 9, 0.9) 100%);
+  --color-mid-dark: radial-gradient(5752.25% 5190.32% at 74.43% 60.32%, rgba(0, 0, 0, 0.9) 0%, rgba(35, 22, 0, 0.9) 0.01%, rgba(112, 92, 94, 0.9) 100%);
+  --color-min-dark: radial-gradient(3906.1% 3815.36% at 89.06% 78.28%, rgba(19, 17, 16, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%);
+  --color-extra-light: radial-gradient(66.02% 86.49% at -16.18% 13.51%, rgba(255, 186, 6, 0.85) 0%, #FFF2AD 100%);
+  --color-max-light: radial-gradient(68.1% 68.1% at 4.41% 31.9%, #FFF6DD 8.72%, #FFFEFA 100%);
+  --color-mid-light: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(250, 250, 250, 0.8) 0%, rgba(250, 250, 250, 0.8) 100%);
+  --color-min-light: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(250, 250, 250, 0.6) 0%, rgba(250, 250, 250, 0.6) 100%);
+  --shadow-extra-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.9);
+  --shadow-max-dark: inset -1px 1px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(242, 159, 13, 0.2);
+  --shadow-mid-dark: inset -1px 0px 1px rgba(255, 255, 255, 0.2), inset 2px 2px 10px rgba(93, 116, 141, 0.6);
+  --shadow-min-dark: inset -1px 0px 2px rgba(255, 255, 255, 0.2), inset 1px 1px 16px rgba(112, 102, 94, 0.2);
+  --shadow-extra-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4);
+  --shadow-max-light: inset -1px 1px 1px rgba(255, 255, 255, 0.5), inset 0px 0px 20px rgba(255, 176, 57, 0.4);
+  --shadow-mid-light: inset -1px 0px 2px rgba(250, 250, 250, 0.2), inset 1px 1px 16px rgba(106, 106, 106, 0.3);
+  --shadow-min-light: inset -1px 0px 2px rgba(250, 250, 250, 0.2), inset 1px 1px 16px rgba(106, 106, 106, 0.2);
+}
+
+.theme_dark {
+  .diagram__picture--theme-dark {
+    display: inline-block;
+  }
+  .activity__picture--theme-dark {
+    display: block;
+  }
+  .nav-controls__btn {
+    &:hover,
+    &:focus-visible {
+      color: var(--color-grey-light);
+    }
+  }
+  .nav-controls__btn {
+    &--light {
+      display: none;
+    }
+    &--dark {
+      display: block;
+    }
+  }
+}
+
+.theme_light {
+  --color-primary: var(--color-dark);
+  --color-secondary: var(--color-grey-light);
+  --color-tertiary: var(--color-dark);
+  --color-quaternary: var(--color-dark);
+
+  --color-bg-main: var(--color-white);
+  --color-bg-main-gradient: var(--gradient-none);
+  --color-bg-stat-primary: var(--gradient-gold-light);
+  --color-bg-stat-secondary: var(--gradient-white-light);
+  --color-bg-stat-tertiary: var(--gradient-white-light);
+  --color-bg-stat-quaternary: var(--gradient-gold-light);
+  --color-bg-stat-fivefold: var(--gradient-white-light);
+
+  --shadow-stat-primary: var(--shadow-gold-light);
+  --shadow-stat-secondary: var(--shadow-white-light);
+  --shadow-stat-tertiary: var(--shadow-white-light);
+
+  --color-button-primary: var(--color-yellow);
+  --color-button-secondary: var(--color-grey-light);
+
+  --color-graph-extra: var(--color-extra-light);
+  --color-graph-max: var(--color-max-light);
+  --color-graph-mid: var(--color-mid-light);
+  --color-graph-min: var(--color-min-light);
+  --shadow-graph-extra: var(--shadow-extra-light);
+  --shadow-graph-max: var(--shadow-max-light);
+  --shadow-graph-mid: var(--shadow-mid-light);
+  --shadow-graph-min: var(--shadow-min-light);
+
+  body {
+    background-color: var(--color-white);
+    background-image: none;
+  }
+
+  .people__img {
+    filter: none;
+  }
+
+  .diagram__picture--theme-light {
+    display: inline-block;
+  }
+
+  .activity__picture--theme-light {
+    display: block;
+  }
+
+  .diagram__picture--theme-dark,
+  .activity__picture--theme-dark {
+    display: none;
+  }
+
+  .activity__bar-color--step {
+    &,
+    &::before,
+    &::after {
+      background-image: radial-gradient(2408.25% 2730.55% at 89.06% 78.28%, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%);
+      box-shadow: inset -1px 0px 2px rgba(255, 255, 255, 0.2), inset 1px 1px 16px rgba(103, 103, 103, 0.2);
+    }
+  }
+
+  .nav-controls__btn {
+    &--dark {
+      display: none;
+    }
+    &--light {
+      display: block;
+    }
+  }
+}
+
+@color-primary: var(--color-primary);
+@color-secondary: var(--color-secondary);
+@color-tertiary: var(--color-tertiary);
+@color-quaternary: var(--color-quaternary);
+
+@bg-main-gradient: var(--color-bg-main-gradient);
+@bg-stat-primary: var(--color-bg-stat-primary);
+@bg-stat-secondary: var(--color-bg-stat-secondary);
+@bg-stat-tertiary: var(--color-bg-stat-tertiary);
+@bg-stat-quaternary: var(--color-bg-stat-quaternary);
+@bg-stat-fivefold: var(--color-bg-stat-fivefold);
+
+@shadow-stat-primary: var(--shadow-stat-primary);
+@shadow-stat-secondary: var(--shadow-stat-secondary);
+@shadow-stat-tertiary: var(--shadow-stat-tertiary);
+
+@button-primary: var(--color-button-primary);
+@button-secondary: var(--color-button-secondary);
+
+@color-graph-extra: var(--color-graph-extra);
+@color-graph-max: var(--color-graph-max);
+@color-graph-mid: var(--color-graph-mid);
+@color-graph-min: var(--color-graph-min);
+@shadow-graph-extra: var(--shadow-graph-extra);
+@shadow-graph-max: var(--shadow-graph-max);
+@shadow-graph-mid: var(--shadow-graph-mid);
+@shadow-graph-min: var(--shadow-graph-min);
+
+@grey: var(--color-grey);
+@grey-light: var(--color-grey-light);

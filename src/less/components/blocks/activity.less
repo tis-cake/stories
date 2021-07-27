@@ -1,0 +1,283 @@
+// генерируем корректный z-index для activity picture
+.generate-z-index(@i: 1) when (@i =< @graph-count) {
+  &:nth-of-type(@{graph-count}n + @{i}) {
+    .activity__picture {
+      z-index: @i;
+    }
+  }
+
+  .generate-z-index(@i + 1);
+}
+
+.activity {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding-bottom: @gap-container-block;
+}
+
+.activity__text-wrap {
+  margin-bottom: 5rem;
+  margin-bottom: 13.33vw;
+}
+
+.activity__title {}
+
+.activity__subtitle {}
+
+.activity__list-graphs {
+  // --length-static: 43.7px;
+  --length-dynamic: 11.653vw;
+
+  position: relative;
+
+  grid-template-columns: repeat(7, var(--length-dynamic));
+  // grid-template-rows: repeat(24, 16.7px);
+  grid-template-rows: repeat(24, 4.453vw);
+  grid-auto-flow: column;
+  margin-bottom: 4.6rem;
+
+  &--full {
+    display: grid;
+  }
+
+  &--half {
+    display: none;
+  }
+}
+
+.activity__graph {
+  position: relative;
+  width: 100%;
+  height: var(--length-dynamic);
+  // margin-top: 4px;
+  margin-top: 1.066vw;
+
+  &:nth-of-type(2n) {
+    // left: 22px;
+    left: 5.866vw;
+  }
+
+  @graph-count: 24;
+  .generate-z-index();
+  // &:nth-of-type(24n+1) { .activity__picture { z-index: 1; }}
+}
+
+.activity__figure-wrap {
+  display: block;
+  position: relative;
+  height: var(--length-dynamic);
+}
+
+.activity__picture {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.activity__figure {
+  &--min {
+    // height: 44px;
+    height: 11.733vw;
+  }
+
+  &--mid {
+    // height: 52.5px;
+    height: 14vw;
+  }
+
+  &--max {
+    // height: 73.6px;
+    height: 19.6vw;
+  }
+
+  &--extra {
+    // height: 94px;
+    height: 25.066vw;
+  }
+}
+
+.activity__list-legends {
+  display: grid;
+  grid-template-columns: repeat(5, 4.6rem);
+  justify-content: space-between;
+}
+
+.activity__legend {}
+
+.activity__bar-color {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1.2rem;
+  border-radius: 0.2rem;
+
+  &--step {
+    height: 0.4rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    background-image: radial-gradient(51.52% 129.57% at 48.48% 50%, rgba(64, 59, 54, 0) 0%, rgba(19, 18, 17, 0.5) 100%);
+    box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.25), inset 3px 1px 16px rgba(112, 102, 94, 0.3);
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: -0.4rem;
+      width: 0.4rem;
+      height: 1.2rem;
+
+      background: radial-gradient(150% 252.96% at 150% 50%, rgba(64, 59, 54, 0.65) 0%, rgba(0, 0, 0, 0.65) 100%);
+      box-shadow: inset 0px -1px 2px rgba(255, 255, 255, 0.25), inset 3px 1px 16px rgba(112, 102, 94, 0.3);
+      border-radius: 0.2rem;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  &--min {
+    background-image: @color-graph-min;
+    box-shadow: @shadow-graph-min;
+  }
+
+  &--mid {
+    background-image: @color-graph-mid;
+    box-shadow: @shadow-graph-mid;
+  }
+
+  &--max {
+    background-image: @color-graph-max;
+    box-shadow: @shadow-graph-max;
+  }
+
+  &--extra {
+    background-image: @color-graph-extra;
+    box-shadow: @shadow-graph-extra;
+  }
+}
+
+.activity__bar-desc {
+  padding-top: 0.8rem;
+  color: @grey;
+
+  &--half {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: @width-phone-middle) {
+  .activity {
+    overflow: initial;
+  }
+
+  .activity__list-graphs {
+    margin-bottom: 7.6rem;
+  }
+
+  .activity__list-legends {
+    grid-template-columns: repeat(5, 5.9rem);
+  }
+
+  .activity__bar-color {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: @width-tablet-small) {
+  .activity {
+    width: 42.5rem;
+    .padding-inline(0);
+  }
+
+  .activity__text-wrap {
+    margin-bottom: 5rem;
+  }
+
+  .activity__list-graphs {
+    --length-static: 3.4rem;
+
+    grid-template-columns: repeat(12, var(--length-static));
+    grid-template-rows: repeat(7, 1.3rem);
+    margin-bottom: 4rem;
+
+    &--full {
+      display: none;
+    }
+
+    &--half {
+      display: grid;
+    }
+  }
+
+  .activity__graph {
+    height: var(--length-static);
+    margin-top: 0.4rem;
+
+    &:nth-of-type(2n) {
+      left: 0;
+    }
+
+    &:nth-of-type(7n + 2),
+    &:nth-of-type(7n + 4),
+    &:nth-of-type(7n + 6) {
+      left: 1.8rem;
+    }
+
+    @graph-count: 7;
+    .generate-z-index();
+  }
+
+  .activity__figure-wrap {
+    height: var(--length-static);
+  }
+
+  .activity__figure {
+    &--min {
+      height: var(--length-static);
+    }
+
+    &--mid {
+      height: 4.2rem;
+    }
+
+    &--max {
+      height: 5.8rem;
+    }
+
+    &--extra {
+      height: 7.4rem;
+    }
+  }
+
+  .activity__list-legends {
+    width: 33.2rem;
+    .margin-inline(@a);
+  }
+
+  .activity__bar-desc {
+    &--full {
+      display: none;
+    }
+
+    &--half {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: @width-tablet-middle) {
+  .activity__text-wrap {
+    margin-bottom: 5.8rem;
+  }
+  .activity__list-graphs {
+    margin-bottom: 5.4rem;
+  }
+}

@@ -1,0 +1,39 @@
+html {
+  --font-size: 1.4rem;
+  --line-height-gap: 0.2rem;
+  --border-radius: 0.6rem;
+
+  --gap-container-block: 2rem;
+  --gap-container-inline: 2.4rem;
+  --transition-main: 0.5s;
+}
+
+@media only screen and (min-width: @width-phone-middle) {
+  html {
+    --font-size: 1.6rem;
+  }
+}
+
+@font-size: var(--font-size);
+@font-main: 'Roboto', 'Arial', sans-serif;
+@get-line-height: calc(var(--font-size) + var(--line-height-gap));
+@radius: var(--border-radius);
+@gap-container-block: var(--gap-container-block);
+@gap-container-inline: var(--gap-container-inline);
+@s: var(--transition-main);
+
+// @width-phone-middle: 375px;
+// @width-tablet-small: 567px;
+// @width-tablet-middle: 667px;
+// @width-tablet-large: 1024px;
+// @width-desktop-middle: 1500px;
+@width-phone-middle: 23.4375em;
+@width-tablet-small: 35.4375em;
+@width-tablet-middle: 41.6875em;
+@width-tablet-large: 64em;
+@width-desktop-middle: 93.75em;
+
+@retina-dpi: 144dpi;
+@retina-dppx: 1.5dppx;
+
+@a: auto;

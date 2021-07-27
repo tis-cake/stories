@@ -1,0 +1,174 @@
+.diagram {
+  width: 100%;
+  padding-bottom: @gap-container-block;
+}
+
+.diagram__text-wrap {
+  margin-bottom: 3.2rem;
+}
+
+.diagram__title {}
+
+.diagram__subtitle {}
+
+.diagram__wrap {
+  display: grid;
+}
+
+.diagram__figure {
+  box-sizing: border-box;
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 32.8rem;
+  margin-bottom: 3.2rem;
+  padding: 5rem;
+
+  text-align: center;
+}
+
+.diagram__figcaption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  width: 16.4rem;
+  height: 11.6rem;
+}
+
+.diagram__figcaption-title {}
+
+.diagram__figcaption-subtitle {
+  margin-top: 0.8rem;
+  color: @color-secondary;
+}
+
+.diagram__picture {
+  display: none;
+
+  width: 100%;
+  height: 100%;
+
+  &--diagram {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  &--icon {}
+
+  &--theme-light {}
+
+  &--theme-dark {
+    .diagram__image {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.diagram__image,
+.diagram__icon {
+  .img-contain;
+}
+
+.diagram__list {
+  display: grid;
+  row-gap: 3.4rem;
+}
+
+.diagram__item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  font-weight: 500;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -1.8rem;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    opacity: 0.3;
+    background-color: @color-secondary;
+  }
+
+  &:last-child {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.diagram__icon-wrap {
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+
+  &--largest {}
+
+  &--large {}
+
+  &--small {}
+
+  &--smallest {}
+}
+
+.diagram__value-desc {}
+
+.diagram__value-change,
+.diagram__value-current {
+  color: @color-secondary;
+}
+
+.diagram__value-change {
+  margin-left: auto;
+}
+
+.diagram__value-current {
+  margin-left: 1.6rem;
+}
+
+@media only screen and (min-width: @width-tablet-middle) {
+  .diagram {
+    width: 58.4rem;
+  }
+
+  .diagram__text-wrap {
+    margin-bottom: 2.9rem;
+  }
+
+  .diagram__wrap {
+    grid-template-columns: 24rem  30.4rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .diagram__figure {
+    height: 24rem;
+    margin-bottom: 0;
+  }
+
+  .diagram__figcaption {
+    width: 12rem;
+    height: 8.6rem;
+  }
+
+  .diagram__figcaption-title {
+    --font-size: 2rem;
+  }
+
+  .diagram__figcaption-subtitle {
+    --font-size: 1.6rem;
+
+    margin-top: 0.6rem;
+  }
+}

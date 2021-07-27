@@ -1,0 +1,29 @@
+.board {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  padding-top: @gap-container-block;
+}
+
+.board__text-wrap {
+  align-self: flex-start;
+  width: 100%;
+}
+
+.board__title {
+  margin-bottom: 0.8rem;
+}
+
+.board__subtitle {
+  font-weight: 500;
+  color: @color-secondary;
+}
+
+.board__nav-controls {}
+
+@media only screen and (min-width: @width-tablet-small) {
+  .board {
+    text-align: center;
+  }
+}
