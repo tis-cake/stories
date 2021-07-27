@@ -1,0 +1,48 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "npm run eslint",
+    "lint": "eslint src/**/*.js --color",
+    "dev": "del-cli build && cross-env NODE_ENV=development webpack serve",
+    "build": "del-cli build && cross-env NODE_ENV=production webpack",
+    "start": "del-cli build && cross-env NODE_ENV=production webpack serve",
+    "stats": "cross-env NODE_ENV=production webpack --analyze --json > stats.json && webpack-bundle-analyzer stats.json"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "browserslist": "^4.16.6",
+    "copy-webpack-plugin": "^6.4.1",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.1.0",
+    "css-minimizer-webpack-plugin": "^1.2.0",
+    "del-cli": "^3.0.1",
+    "eslint": "^7.20.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-html": "^6.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.2",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "less": "^4.1.1",
+    "less-loader": "^7.3.0",
+    "mini-css-extract-plugin": "^1.3.9",
+    "npm": "^7.6.0",
+    "postcss": "^8.3.5",
+    "postcss-loader": "^4.2.0",
+    "terser-webpack-plugin": "^4.2.3",
+    "webpack": "^4.44.2",
+    "webpack-bundle-analyzer": "^4.4.0",
+    "webpack-cli": "^4.5.0",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-notifier": "^1.13.0"
+  },
+  "browserslist": [
+    "last 2 years",
+    "not dead",
+    "> 1%"
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,12 @@
+node_modules
+/.git
+
+/gulpfile.js
+/webpack.config.js
+
+/build/*.js
+/src/data/
+/src/js/libs
+/src/js/polyfills
+
+/OLD
